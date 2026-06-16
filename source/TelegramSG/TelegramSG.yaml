@@ -1,6 +1,0 @@
-- name: TelegramSG
-  description: TelegramSG
-  type: http
-  behavior: classical
-  format: yaml
-  url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TelegramSG/TelegramSG.yaml
