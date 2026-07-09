@@ -3,7 +3,7 @@
   type: http
   behavior: classical
   format: yaml
-  url: https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/ChinaMaxNoIP/ChinaMaxNoIP.yaml
+  url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaMaxNoIP/ChinaMaxNoIP.yaml
 - name: ChinaMaxNoIP_Domain
   description: ChinaMaxNoIP Domain
   type: http

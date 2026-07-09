@@ -5,6 +5,7 @@ import { pipeline } from "node:stream/promises";
 import { Readable } from "node:stream";
 import zlib from "node:zlib";
 import extractZip from "extract-zip";
+import { githubFetchOptions } from "./github.mjs";
 
 export const releaseDownloadBaseURL = "https://github.com/MetaCubeX/mihomo/releases/download/";
 export const releaseVersionURL = "https://github.com/MetaCubeX/mihomo/releases/latest/download/version.txt";
@@ -112,7 +113,7 @@ export async function resolveMihomoVersion({ channel = defaultMihomoChannel, fet
   const config = channelConfigs[normalizedChannel];
   let response;
   try {
-    response = await fetchImpl(config.versionURL);
+    response = await fetchImpl(config.versionURL, githubFetchOptions(config.versionURL));
   } catch (error) {
     throw new MihomoDownloadError(`failed to fetch Mihomo ${config.label} version: ${error.message}`);
   }
@@ -127,7 +128,7 @@ export async function resolveMihomoVersion({ channel = defaultMihomoChannel, fet
 export async function downloadFile({ url, targetPath, fetchImpl = fetch, maxBytes = maxPackageFileSize }) {
   let response;
   try {
-    response = await fetchImpl(url);
+    response = await fetchImpl(url, githubFetchOptions(url));
   } catch (error) {
     throw new MihomoDownloadError(`failed to download Mihomo package: ${error.message}`);
   }

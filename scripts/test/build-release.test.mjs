@@ -24,6 +24,20 @@ async function withProject(files, fn) {
   }
 }
 
+async function withCustomGitHubToken(token, fn) {
+  const original = process.env.CUSTOM_GITHUB_TOKEN;
+  process.env.CUSTOM_GITHUB_TOKEN = token;
+  try {
+    return await fn();
+  } finally {
+    if (original === undefined) {
+      delete process.env.CUSTOM_GITHUB_TOKEN;
+    } else {
+      process.env.CUSTOM_GITHUB_TOKEN = original;
+    }
+  }
+}
+
 async function createMihomoStub(root) {
   const stubPath = path.join(root, "mihomo-stub.cjs");
   await fs.writeFile(
@@ -515,6 +529,41 @@ test("fetches http sources and writes original artifacts", async () => {
       );
     },
   );
+});
+
+test("adds custom GitHub token to GitHub source requests", async () => {
+  await withCustomGitHubToken("test-token", async () => {
+    await withProject(
+      {
+        "source/http/source.yaml": `
+- name: remote
+  type: http
+  url: https://raw.githubusercontent.com/example/private/main/rules.txt
+  behavior: classical
+  format: text
+`,
+      },
+      async ({ root, mihomoPath }) => {
+        await buildRelease({
+          projectRoot: root,
+          repository: "xream/rule",
+          mihomoPath,
+          fetchImpl: async (url, options) => {
+            assert.equal(
+              url,
+              "https://raw.githubusercontent.com/example/private/main/rules.txt",
+            );
+            assert.deepEqual(options, {
+              headers: {
+                Authorization: "Bearer test-token",
+              },
+            });
+            return new Response("DOMAIN,remote.example\n");
+          },
+        });
+      },
+    );
+  });
 });
 
 test("writes inline payloads as original artifacts", async () => {

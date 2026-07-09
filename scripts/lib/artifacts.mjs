@@ -4,6 +4,7 @@ import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import YAML from "yaml";
 import { enabledFiles, loadAllSources } from "./config.mjs";
+import { githubFetchOptions } from "./github.mjs";
 import { renderReleaseReadme } from "./links.mjs";
 import { installMihomo } from "./mihomo.mjs";
 import { rulesToYaml, splitRules } from "./rules.mjs";
@@ -462,7 +463,10 @@ async function resolveRawEntry(entry, fetchImpl) {
 }
 
 function fetchOptions(entry) {
-  return entry.headers ? { headers: entry.headers } : undefined;
+  return githubFetchOptions(
+    entry.url,
+    entry.headers ? { headers: entry.headers } : undefined,
+  );
 }
 
 function inlinePayloadToContent(entry) {

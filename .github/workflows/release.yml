@@ -42,6 +42,7 @@ jobs:
         run: bun run build:release
         env:
           GITHUB_REPOSITORY: ${{ github.repository }}
+          CUSTOM_GITHUB_TOKEN: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
 
       - name: Prepare provider artifact change notification
         run: bun scripts/notify-artifact-changes.mjs --out .release-work/telegram-notification.html

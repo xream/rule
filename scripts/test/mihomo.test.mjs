@@ -16,6 +16,20 @@ import {
   resolveMihomoVersion,
 } from "../lib/mihomo.mjs";
 
+async function withCustomGitHubToken(token, fn) {
+  const original = process.env.CUSTOM_GITHUB_TOKEN;
+  process.env.CUSTOM_GITHUB_TOKEN = token;
+  try {
+    return await fn();
+  } finally {
+    if (original === undefined) {
+      delete process.env.CUSTOM_GITHUB_TOKEN;
+    } else {
+      process.env.CUSTOM_GITHUB_TOKEN = original;
+    }
+  }
+}
+
 test("constructs release package URLs", () => {
   assert.equal(
     mihomoPackageName({ channel: "release", version: "v1.2.3", platform: "linux", arch: "x64" }),
@@ -172,4 +186,30 @@ test("fails when package exceeds size limit", async () => {
   } finally {
     await fs.rm(dir, { recursive: true, force: true });
   }
+});
+
+test("adds custom GitHub token to Mihomo GitHub requests", async () => {
+  await withCustomGitHubToken("test-token", async () => {
+    const dir = await fs.mkdtemp(path.join(os.tmpdir(), "mihomo-token-"));
+    try {
+      await downloadFile({
+        url: `${releaseDownloadBaseURL}v1.2.3/mihomo-linux-amd64-v1-v1.2.3.gz`,
+        targetPath: path.join(dir, "mihomo.gz"),
+        fetchImpl: async (url, options) => {
+          assert.equal(
+            url,
+            `${releaseDownloadBaseURL}v1.2.3/mihomo-linux-amd64-v1-v1.2.3.gz`,
+          );
+          assert.deepEqual(options, {
+            headers: {
+              Authorization: "Bearer test-token",
+            },
+          });
+          return new Response("binary");
+        },
+      });
+    } finally {
+      await fs.rm(dir, { recursive: true, force: true });
+    }
+  });
 });
