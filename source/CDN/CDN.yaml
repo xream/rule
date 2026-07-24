@@ -1,0 +1,5 @@
+- name: QuixoticHeart
+  type: http
+  behavior: classical
+  format: text
+  url: https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/meta/cdn.list
