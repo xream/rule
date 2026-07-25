@@ -1,0 +1,12 @@
+- name: cn-additional-list
+  description: https://www.nodeseek.com/post-464238-6
+  type: http
+  behavior: domain
+  format: text
+  url: https://static-file-global.353355.xyz/rules/cn-additional-list.txt
+- name: geolocation-cn
+  description: geolocation-cn
+  type: http
+  behavior: domain
+  format: text
+  url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/geolocation-cn.list

@@ -489,7 +489,8 @@ test("fake-ip-filter entries only generate domain mrs and ignore route entries i
   );
 });
 
-test("fetches http sources and writes original artifacts", async () => {
+test("retries rate-limited http sources and writes original artifacts", async () => {
+  let requests = 0;
   await withProject(
     {
       "source/http/source.yaml": `
@@ -517,9 +518,17 @@ test("fetches http sources and writes original artifacts", async () => {
               "X-Rule-Source": "fixture",
             },
           });
+          requests += 1;
+          if (requests < 3) {
+            return new Response("rate limited", {
+              status: 429,
+              headers: { "Retry-After": "0" },
+            });
+          }
           return new Response("DOMAIN,remote.example\n");
         },
       });
+      assert.equal(requests, 3);
       assert.equal(
         await fs.readFile(
           path.join(root, ".release", "http", "remote.original.txt"),
@@ -527,6 +536,26 @@ test("fetches http sources and writes original artifacts", async () => {
         ),
         "DOMAIN,remote.example\n",
       );
+
+      for (const [retryAfter, expectedRequests] of [["0", 3], ["61", 1]]) {
+        let limitedRequests = 0;
+        await assert.rejects(
+          buildRelease({
+            projectRoot: root,
+            repository: "xream/rule",
+            mihomoPath,
+            fetchImpl: async () => {
+              limitedRequests += 1;
+              return new Response("rate limited", {
+                status: 429,
+                headers: { "Retry-After": retryAfter },
+              });
+            },
+          }),
+          /HTTP 429/,
+        );
+        assert.equal(limitedRequests, expectedRequests);
+      }
     },
   );
 });

@@ -1,6 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { execFile } from "node:child_process";
+import { setTimeout as sleep } from "node:timers/promises";
 import { promisify } from "node:util";
 import YAML from "yaml";
 import { enabledFiles, loadAllSources } from "./config.mjs";
@@ -11,6 +12,8 @@ import { rulesToYaml, splitRules } from "./rules.mjs";
 
 const execFileAsync = promisify(execFile);
 const SAFE_PROJECT_RESET_DIRS = new Set([".release", ".release-work"]);
+const HTTP_429_RETRIES = 2;
+const MAX_RETRY_DELAY_MS = 60_000;
 const PLACEHOLDER_RULES = {
   domain: ["blackhole.invalid"],
   ipcidr: ["203.0.113.1/32"],
@@ -440,7 +443,13 @@ async function resolveRawEntry(entry, fetchImpl) {
   if (entry.type === "http") {
     let response;
     try {
-      response = await fetchImpl(entry.url, fetchOptions(entry));
+      for (let retries = 0; retries <= HTTP_429_RETRIES; retries += 1) {
+        response = await fetchImpl(entry.url, fetchOptions(entry));
+        if (response.status !== 429 || retries === HTTP_429_RETRIES) break;
+        const delay = retryDelayMs(response);
+        if (delay > MAX_RETRY_DELAY_MS) break;
+        await sleep(delay);
+      }
     } catch (error) {
       throw new BuildReleaseError(`failed to fetch ${entry.url}: ${error.message}`, context);
     }
@@ -460,6 +469,13 @@ async function resolveRawEntry(entry, fetchImpl) {
     return Buffer.from(inlinePayloadToContent(entry), "utf8");
   }
   throw new BuildReleaseError(`unsupported source type ${entry.type}`, context);
+}
+
+function retryDelayMs(response) {
+  const value = response.headers.get("retry-after");
+  const seconds = value === null ? NaN : Number(value);
+  const delay = Number.isFinite(seconds) ? seconds * 1000 : Date.parse(value) - Date.now();
+  return Math.max(Number.isFinite(delay) ? delay : MAX_RETRY_DELAY_MS, 0);
 }
 
 function fetchOptions(entry) {
