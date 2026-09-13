@@ -1,0 +1,645 @@
+{
+  "version": 1,
+  "providerArtifacts": [
+    {
+      "relativePath": "AI/AI_Domain.mrs",
+      "sourceRelativeDir": "AI",
+      "entryName": "AI",
+      "fileName": "AI_Domain.mrs",
+      "kind": "domain-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "AI",
+      "placeholder": false
+    },
+    {
+      "relativePath": "AI/AI_IP.mrs",
+      "sourceRelativeDir": "AI",
+      "entryName": "AI",
+      "fileName": "AI_IP.mrs",
+      "kind": "ipcidr-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "AI",
+      "placeholder": false
+    },
+    {
+      "relativePath": "AI/AI.yaml",
+      "sourceRelativeDir": "AI",
+      "entryName": "AI",
+      "fileName": "AI.yaml",
+      "kind": "remaining-yaml",
+      "mihomo": "rules",
+      "ruleGroupName": "AI",
+      "placeholder": false
+    },
+    {
+      "relativePath": "Apple/Apple_Domain.mrs",
+      "sourceRelativeDir": "Apple",
+      "entryName": "Apple",
+      "fileName": "Apple_Domain.mrs",
+      "kind": "domain-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "Apple",
+      "placeholder": false
+    },
+    {
+      "relativePath": "Apple/Apple_IP.mrs",
+      "sourceRelativeDir": "Apple",
+      "entryName": "Apple",
+      "fileName": "Apple_IP.mrs",
+      "kind": "ipcidr-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "Apple",
+      "placeholder": false
+    },
+    {
+      "relativePath": "Apple/Apple.yaml",
+      "sourceRelativeDir": "Apple",
+      "entryName": "Apple",
+      "fileName": "Apple.yaml",
+      "kind": "remaining-yaml",
+      "mihomo": "rules",
+      "ruleGroupName": "Apple",
+      "placeholder": false
+    },
+    {
+      "relativePath": "AppleProxy/AppleProxy_Domain.mrs",
+      "sourceRelativeDir": "AppleProxy",
+      "entryName": "AppleProxy",
+      "fileName": "AppleProxy_Domain.mrs",
+      "kind": "domain-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "AppleProxy",
+      "placeholder": false
+    },
+    {
+      "relativePath": "AppleProxy/AppleProxy_IP.mrs",
+      "sourceRelativeDir": "AppleProxy",
+      "entryName": "AppleProxy",
+      "fileName": "AppleProxy_IP.mrs",
+      "kind": "ipcidr-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "AppleProxy",
+      "placeholder": true
+    },
+    {
+      "relativePath": "AppleProxy/AppleProxy.yaml",
+      "sourceRelativeDir": "AppleProxy",
+      "entryName": "AppleProxy",
+      "fileName": "AppleProxy.yaml",
+      "kind": "remaining-yaml",
+      "mihomo": "rules",
+      "ruleGroupName": "AppleProxy",
+      "placeholder": false
+    },
+    {
+      "relativePath": "BlockHttpDNS/BlockHttpDNS_Domain.mrs",
+      "sourceRelativeDir": "BlockHttpDNS",
+      "entryName": "BlockHttpDNS",
+      "fileName": "BlockHttpDNS_Domain.mrs",
+      "kind": "domain-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "BlockHttpDNS",
+      "placeholder": false
+    },
+    {
+      "relativePath": "BlockHttpDNS/BlockHttpDNS_IP.mrs",
+      "sourceRelativeDir": "BlockHttpDNS",
+      "entryName": "BlockHttpDNS",
+      "fileName": "BlockHttpDNS_IP.mrs",
+      "kind": "ipcidr-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "BlockHttpDNS",
+      "placeholder": false
+    },
+    {
+      "relativePath": "BlockHttpDNS/BlockHttpDNS.yaml",
+      "sourceRelativeDir": "BlockHttpDNS",
+      "entryName": "BlockHttpDNS",
+      "fileName": "BlockHttpDNS.yaml",
+      "kind": "remaining-yaml",
+      "mihomo": "rules",
+      "ruleGroupName": "BlockHttpDNS",
+      "placeholder": true
+    },
+    {
+      "relativePath": "CDN/CDN_Domain.mrs",
+      "sourceRelativeDir": "CDN",
+      "entryName": "CDN",
+      "fileName": "CDN_Domain.mrs",
+      "kind": "domain-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "CDN",
+      "placeholder": false
+    },
+    {
+      "relativePath": "CDN/CDN_IP.mrs",
+      "sourceRelativeDir": "CDN",
+      "entryName": "CDN",
+      "fileName": "CDN_IP.mrs",
+      "kind": "ipcidr-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "CDN",
+      "placeholder": true
+    },
+    {
+      "relativePath": "CDN/CDN.yaml",
+      "sourceRelativeDir": "CDN",
+      "entryName": "CDN",
+      "fileName": "CDN.yaml",
+      "kind": "remaining-yaml",
+      "mihomo": "rules",
+      "ruleGroupName": "CDN",
+      "placeholder": false
+    },
+    {
+      "relativePath": "ChinaMaxNoIP/ChinaMaxNoIP_Domain.mrs",
+      "sourceRelativeDir": "ChinaMaxNoIP",
+      "entryName": "ChinaMaxNoIP",
+      "fileName": "ChinaMaxNoIP_Domain.mrs",
+      "kind": "domain-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "ChinaMaxNoIP",
+      "placeholder": false
+    },
+    {
+      "relativePath": "ChinaMaxNoIP/ChinaMaxNoIP_IP.mrs",
+      "sourceRelativeDir": "ChinaMaxNoIP",
+      "entryName": "ChinaMaxNoIP",
+      "fileName": "ChinaMaxNoIP_IP.mrs",
+      "kind": "ipcidr-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "ChinaMaxNoIP",
+      "placeholder": true
+    },
+    {
+      "relativePath": "ChinaMaxNoIP/ChinaMaxNoIP.yaml",
+      "sourceRelativeDir": "ChinaMaxNoIP",
+      "entryName": "ChinaMaxNoIP",
+      "fileName": "ChinaMaxNoIP.yaml",
+      "kind": "remaining-yaml",
+      "mihomo": "rules",
+      "ruleGroupName": "ChinaMaxNoIP",
+      "placeholder": false
+    },
+    {
+      "relativePath": "CN/CN_Domain.mrs",
+      "sourceRelativeDir": "CN",
+      "entryName": "CN",
+      "fileName": "CN_Domain.mrs",
+      "kind": "domain-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "CN",
+      "placeholder": false
+    },
+    {
+      "relativePath": "CN/CN_IP.mrs",
+      "sourceRelativeDir": "CN",
+      "entryName": "CN",
+      "fileName": "CN_IP.mrs",
+      "kind": "ipcidr-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "CN",
+      "placeholder": true
+    },
+    {
+      "relativePath": "CN/CN.yaml",
+      "sourceRelativeDir": "CN",
+      "entryName": "CN",
+      "fileName": "CN.yaml",
+      "kind": "remaining-yaml",
+      "mihomo": "rules",
+      "ruleGroupName": "CN",
+      "placeholder": true
+    },
+    {
+      "relativePath": "Crypto/Crypto_Domain.mrs",
+      "sourceRelativeDir": "Crypto",
+      "entryName": "Crypto",
+      "fileName": "Crypto_Domain.mrs",
+      "kind": "domain-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "Crypto",
+      "placeholder": false
+    },
+    {
+      "relativePath": "Crypto/Crypto_IP.mrs",
+      "sourceRelativeDir": "Crypto",
+      "entryName": "Crypto",
+      "fileName": "Crypto_IP.mrs",
+      "kind": "ipcidr-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "Crypto",
+      "placeholder": false
+    },
+    {
+      "relativePath": "Crypto/Crypto.yaml",
+      "sourceRelativeDir": "Crypto",
+      "entryName": "Crypto",
+      "fileName": "Crypto.yaml",
+      "kind": "remaining-yaml",
+      "mihomo": "rules",
+      "ruleGroupName": "Crypto",
+      "placeholder": false
+    },
+    {
+      "relativePath": "Direct/Direct_Domain.mrs",
+      "sourceRelativeDir": "Direct",
+      "entryName": "Direct",
+      "fileName": "Direct_Domain.mrs",
+      "kind": "domain-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "Direct",
+      "placeholder": false
+    },
+    {
+      "relativePath": "Direct/Direct_IP.mrs",
+      "sourceRelativeDir": "Direct",
+      "entryName": "Direct",
+      "fileName": "Direct_IP.mrs",
+      "kind": "ipcidr-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "Direct",
+      "placeholder": true
+    },
+    {
+      "relativePath": "Direct/Direct.yaml",
+      "sourceRelativeDir": "Direct",
+      "entryName": "Direct",
+      "fileName": "Direct.yaml",
+      "kind": "remaining-yaml",
+      "mihomo": "rules",
+      "ruleGroupName": "Direct",
+      "placeholder": false
+    },
+    {
+      "relativePath": "Docker/Docker_Domain.mrs",
+      "sourceRelativeDir": "Docker",
+      "entryName": "Docker",
+      "fileName": "Docker_Domain.mrs",
+      "kind": "domain-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "Docker",
+      "placeholder": false
+    },
+    {
+      "relativePath": "Docker/Docker_IP.mrs",
+      "sourceRelativeDir": "Docker",
+      "entryName": "Docker",
+      "fileName": "Docker_IP.mrs",
+      "kind": "ipcidr-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "Docker",
+      "placeholder": true
+    },
+    {
+      "relativePath": "Docker/Docker.yaml",
+      "sourceRelativeDir": "Docker",
+      "entryName": "Docker",
+      "fileName": "Docker.yaml",
+      "kind": "remaining-yaml",
+      "mihomo": "rules",
+      "ruleGroupName": "Docker",
+      "placeholder": true
+    },
+    {
+      "relativePath": "Download/Download_Domain.mrs",
+      "sourceRelativeDir": "Download",
+      "entryName": "Download",
+      "fileName": "Download_Domain.mrs",
+      "kind": "domain-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "Download",
+      "placeholder": false
+    },
+    {
+      "relativePath": "Download/Download_IP.mrs",
+      "sourceRelativeDir": "Download",
+      "entryName": "Download",
+      "fileName": "Download_IP.mrs",
+      "kind": "ipcidr-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "Download",
+      "placeholder": true
+    },
+    {
+      "relativePath": "Download/Download.yaml",
+      "sourceRelativeDir": "Download",
+      "entryName": "Download",
+      "fileName": "Download.yaml",
+      "kind": "remaining-yaml",
+      "mihomo": "rules",
+      "ruleGroupName": "Download",
+      "placeholder": false
+    },
+    {
+      "relativePath": "FakeIPFilter/FakeIPFilter_Domain.mrs",
+      "sourceRelativeDir": "FakeIPFilter",
+      "entryName": "FakeIPFilter",
+      "fileName": "FakeIPFilter_Domain.mrs",
+      "kind": "domain-mrs",
+      "mihomo": "fake-ip-filter",
+      "ruleGroupName": "FakeIPFilter",
+      "placeholder": false
+    },
+    {
+      "relativePath": "GameDownload/GameDownload_Domain.mrs",
+      "sourceRelativeDir": "GameDownload",
+      "entryName": "GameDownload",
+      "fileName": "GameDownload_Domain.mrs",
+      "kind": "domain-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "GameDownload",
+      "placeholder": false
+    },
+    {
+      "relativePath": "GameDownload/GameDownload_IP.mrs",
+      "sourceRelativeDir": "GameDownload",
+      "entryName": "GameDownload",
+      "fileName": "GameDownload_IP.mrs",
+      "kind": "ipcidr-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "GameDownload",
+      "placeholder": true
+    },
+    {
+      "relativePath": "GameDownload/GameDownload.yaml",
+      "sourceRelativeDir": "GameDownload",
+      "entryName": "GameDownload",
+      "fileName": "GameDownload.yaml",
+      "kind": "remaining-yaml",
+      "mihomo": "rules",
+      "ruleGroupName": "GameDownload",
+      "placeholder": true
+    },
+    {
+      "relativePath": "GameDownloadCN/GameDownloadCN_Domain.mrs",
+      "sourceRelativeDir": "GameDownloadCN",
+      "entryName": "GameDownloadCN",
+      "fileName": "GameDownloadCN_Domain.mrs",
+      "kind": "domain-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "GameDownloadCN",
+      "placeholder": false
+    },
+    {
+      "relativePath": "GameDownloadCN/GameDownloadCN_IP.mrs",
+      "sourceRelativeDir": "GameDownloadCN",
+      "entryName": "GameDownloadCN",
+      "fileName": "GameDownloadCN_IP.mrs",
+      "kind": "ipcidr-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "GameDownloadCN",
+      "placeholder": true
+    },
+    {
+      "relativePath": "GameDownloadCN/GameDownloadCN.yaml",
+      "sourceRelativeDir": "GameDownloadCN",
+      "entryName": "GameDownloadCN",
+      "fileName": "GameDownloadCN.yaml",
+      "kind": "remaining-yaml",
+      "mihomo": "rules",
+      "ruleGroupName": "GameDownloadCN",
+      "placeholder": true
+    },
+    {
+      "relativePath": "GitHub/GitHub_Domain.mrs",
+      "sourceRelativeDir": "GitHub",
+      "entryName": "GitHub",
+      "fileName": "GitHub_Domain.mrs",
+      "kind": "domain-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "GitHub",
+      "placeholder": false
+    },
+    {
+      "relativePath": "GitHub/GitHub_IP.mrs",
+      "sourceRelativeDir": "GitHub",
+      "entryName": "GitHub",
+      "fileName": "GitHub_IP.mrs",
+      "kind": "ipcidr-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "GitHub",
+      "placeholder": true
+    },
+    {
+      "relativePath": "GitHub/GitHub.yaml",
+      "sourceRelativeDir": "GitHub",
+      "entryName": "GitHub",
+      "fileName": "GitHub.yaml",
+      "kind": "remaining-yaml",
+      "mihomo": "rules",
+      "ruleGroupName": "GitHub",
+      "placeholder": false
+    },
+    {
+      "relativePath": "Global/Global_Domain.mrs",
+      "sourceRelativeDir": "Global",
+      "entryName": "Global",
+      "fileName": "Global_Domain.mrs",
+      "kind": "domain-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "Global",
+      "placeholder": false
+    },
+    {
+      "relativePath": "Global/Global_IP.mrs",
+      "sourceRelativeDir": "Global",
+      "entryName": "Global",
+      "fileName": "Global_IP.mrs",
+      "kind": "ipcidr-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "Global",
+      "placeholder": false
+    },
+    {
+      "relativePath": "Global/Global.yaml",
+      "sourceRelativeDir": "Global",
+      "entryName": "Global",
+      "fileName": "Global.yaml",
+      "kind": "remaining-yaml",
+      "mihomo": "rules",
+      "ruleGroupName": "Global",
+      "placeholder": false
+    },
+    {
+      "relativePath": "Lan/Lan_Domain.mrs",
+      "sourceRelativeDir": "Lan",
+      "entryName": "Lan",
+      "fileName": "Lan_Domain.mrs",
+      "kind": "domain-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "Lan",
+      "placeholder": false
+    },
+    {
+      "relativePath": "Lan/Lan_IP.mrs",
+      "sourceRelativeDir": "Lan",
+      "entryName": "Lan",
+      "fileName": "Lan_IP.mrs",
+      "kind": "ipcidr-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "Lan",
+      "placeholder": false
+    },
+    {
+      "relativePath": "Lan/Lan.yaml",
+      "sourceRelativeDir": "Lan",
+      "entryName": "Lan",
+      "fileName": "Lan.yaml",
+      "kind": "remaining-yaml",
+      "mihomo": "rules",
+      "ruleGroupName": "Lan",
+      "placeholder": true
+    },
+    {
+      "relativePath": "P2P/P2P_Domain.mrs",
+      "sourceRelativeDir": "P2P",
+      "entryName": "P2P",
+      "fileName": "P2P_Domain.mrs",
+      "kind": "domain-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "P2P",
+      "placeholder": false
+    },
+    {
+      "relativePath": "P2P/P2P_IP.mrs",
+      "sourceRelativeDir": "P2P",
+      "entryName": "P2P",
+      "fileName": "P2P_IP.mrs",
+      "kind": "ipcidr-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "P2P",
+      "placeholder": false
+    },
+    {
+      "relativePath": "P2P/P2P.yaml",
+      "sourceRelativeDir": "P2P",
+      "entryName": "P2P",
+      "fileName": "P2P.yaml",
+      "kind": "remaining-yaml",
+      "mihomo": "rules",
+      "ruleGroupName": "P2P",
+      "placeholder": false
+    },
+    {
+      "relativePath": "PayPal/PayPal_Domain.mrs",
+      "sourceRelativeDir": "PayPal",
+      "entryName": "PayPal",
+      "fileName": "PayPal_Domain.mrs",
+      "kind": "domain-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "PayPal",
+      "placeholder": false
+    },
+    {
+      "relativePath": "PayPal/PayPal_IP.mrs",
+      "sourceRelativeDir": "PayPal",
+      "entryName": "PayPal",
+      "fileName": "PayPal_IP.mrs",
+      "kind": "ipcidr-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "PayPal",
+      "placeholder": true
+    },
+    {
+      "relativePath": "PayPal/PayPal.yaml",
+      "sourceRelativeDir": "PayPal",
+      "entryName": "PayPal",
+      "fileName": "PayPal.yaml",
+      "kind": "remaining-yaml",
+      "mihomo": "rules",
+      "ruleGroupName": "PayPal",
+      "placeholder": false
+    },
+    {
+      "relativePath": "Steam/Steam_Domain.mrs",
+      "sourceRelativeDir": "Steam",
+      "entryName": "Steam",
+      "fileName": "Steam_Domain.mrs",
+      "kind": "domain-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "Steam",
+      "placeholder": false
+    },
+    {
+      "relativePath": "Steam/Steam_IP.mrs",
+      "sourceRelativeDir": "Steam",
+      "entryName": "Steam",
+      "fileName": "Steam_IP.mrs",
+      "kind": "ipcidr-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "Steam",
+      "placeholder": true
+    },
+    {
+      "relativePath": "Steam/Steam.yaml",
+      "sourceRelativeDir": "Steam",
+      "entryName": "Steam",
+      "fileName": "Steam.yaml",
+      "kind": "remaining-yaml",
+      "mihomo": "rules",
+      "ruleGroupName": "Steam",
+      "placeholder": false
+    },
+    {
+      "relativePath": "SteamCN/SteamCN_Domain.mrs",
+      "sourceRelativeDir": "SteamCN",
+      "entryName": "SteamCN",
+      "fileName": "SteamCN_Domain.mrs",
+      "kind": "domain-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "SteamCN",
+      "placeholder": false
+    },
+    {
+      "relativePath": "SteamCN/SteamCN_IP.mrs",
+      "sourceRelativeDir": "SteamCN",
+      "entryName": "SteamCN",
+      "fileName": "SteamCN_IP.mrs",
+      "kind": "ipcidr-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "SteamCN",
+      "placeholder": true
+    },
+    {
+      "relativePath": "SteamCN/SteamCN.yaml",
+      "sourceRelativeDir": "SteamCN",
+      "entryName": "SteamCN",
+      "fileName": "SteamCN.yaml",
+      "kind": "remaining-yaml",
+      "mihomo": "rules",
+      "ruleGroupName": "SteamCN",
+      "placeholder": true
+    },
+    {
+      "relativePath": "Telegram/Telegram_Domain.mrs",
+      "sourceRelativeDir": "Telegram",
+      "entryName": "Telegram",
+      "fileName": "Telegram_Domain.mrs",
+      "kind": "domain-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "Telegram",
+      "placeholder": false
+    },
+    {
+      "relativePath": "Telegram/Telegram_IP.mrs",
+      "sourceRelativeDir": "Telegram",
+      "entryName": "Telegram",
+      "fileName": "Telegram_IP.mrs",
+      "kind": "ipcidr-mrs",
+      "mihomo": "rules",
+      "ruleGroupName": "Telegram",
+      "placeholder": false
+    },
+    {
+      "relativePath": "Telegram/Telegram.yaml",
+      "sourceRelativeDir": "Telegram",
+      "entryName": "Telegram",
+      "fileName": "Telegram.yaml",
+      "kind": "remaining-yaml",
+      "mihomo": "rules",
+      "ruleGroupName": "Telegram",
+      "placeholder": false
+    }
+  ]
+}
