@@ -1,0 +1,3 @@
+payload:
+  - DOMAIN-WILDCARD,stun*.chat.bilibili.com
+  - AND,((NETWORK,UDP),(DST-PORT,10000-65535))
