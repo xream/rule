@@ -1,0 +1,7 @@
+# 关闭虎牙直播的P2P上传之类的功能
+DOMAIN-SUFFIX,metric.huya.com
+DOMAIN-SUFFIX,ylog.huya.com
+DOMAIN-SUFFIX,e-ad-monitor.huya.com
+DOMAIN-SUFFIX,p2p.huya.com
+DOMAIN-SUFFIX,statwup.huya.com
+DOMAIN-SUFFIX,e-stat.huya.com

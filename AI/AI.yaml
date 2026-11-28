@@ -1,0 +1,7 @@
+payload:
+  - IP-ASN,14061,no-resolve
+  - IP-ASN,20473,no-resolve
+  - IP-ASN,399358,no-resolve
+  - IP-ASN,401518,no-resolve
+  - DOMAIN-KEYWORD,openai
+  - DOMAIN-KEYWORD,alkalimakersuite-pa.clients6.google.com
